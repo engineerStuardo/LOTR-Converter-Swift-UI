@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B44D225E2B0E1AC8008C99A5 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44D225D2B0E1AC8008C99A5 /* CustomButton.swift */; };
+		B44D22602B0E4828008C99A5 /* InputForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44D225F2B0E4828008C99A5 /* InputForm.swift */; };
 		B4BE5AC22B0D122500935C78 /* LOTR_Converter_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BE5AC12B0D122500935C78 /* LOTR_Converter_SwiftUIApp.swift */; };
 		B4BE5AC42B0D122500935C78 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BE5AC32B0D122500935C78 /* ContentView.swift */; };
 		B4BE5AC62B0D122700935C78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4BE5AC52B0D122700935C78 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		B44D225D2B0E1AC8008C99A5 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		B44D225F2B0E4828008C99A5 /* InputForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputForm.swift; sourceTree = "<group>"; };
 		B4BE5ABE2B0D122500935C78 /* LOTR Converter SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LOTR Converter SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4BE5AC12B0D122500935C78 /* LOTR_Converter_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LOTR_Converter_SwiftUIApp.swift; sourceTree = "<group>"; };
 		B4BE5AC32B0D122500935C78 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				B4BE5ADB2B0D77FE00935C78 /* Currency.swift */,
 				B4BE5AC32B0D122500935C78 /* ContentView.swift */,
 				B4BE5AD32B0D449000935C78 /* FormContainer.swift */,
+				B44D225F2B0E4828008C99A5 /* InputForm.swift */,
 				B4BE5ACF2B0D3B2300935C78 /* ExchangeInfo.swift */,
 				B4BE5AD12B0D40A400935C78 /* ExchangeRate.swift */,
 				B4BE5AD52B0D49AB00935C78 /* SelectCurrency.swift */,
@@ -165,6 +168,7 @@
 				B4BE5AD02B0D3B2400935C78 /* ExchangeInfo.swift in Sources */,
 				B4BE5AD42B0D449000935C78 /* FormContainer.swift in Sources */,
 				B4BE5AD82B0D4FA200935C78 /* CurrencyIcon.swift in Sources */,
+				B44D22602B0E4828008C99A5 /* InputForm.swift in Sources */,
 				B4BE5ADC2B0D77FE00935C78 /* Currency.swift in Sources */,
 				B44D225E2B0E1AC8008C99A5 /* CustomButton.swift in Sources */,
 				B4BE5AC42B0D122500935C78 /* ContentView.swift in Sources */,
