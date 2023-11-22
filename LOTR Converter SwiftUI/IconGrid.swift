@@ -10,14 +10,19 @@ import SwiftUI
 struct IconGrid: View {
     @State var gridLayout = [GridItem(), GridItem(), GridItem()]
     @Binding var currency: Currency
+    @State var keyPath: String
     
     var body: some View {
         LazyVGrid(columns: gridLayout) {
             ForEach(0..<5) { i in
+                let currencyImageTemp = CurrencyImage.allCases[i]
+                let currencyTextTemp = CurrencyText.allCases[i]
+                let currencyTemp = Currency.allCases[i]
+                
                 if Currency.allCases[i] == currency {
                     CurrencyIcon(
-                        icon: CurrencyImage.allCases[i].rawValue,
-                        title: CurrencyText.allCases[i].rawValue
+                        icon: currencyImageTemp.rawValue,
+                        title: currencyTextTemp.rawValue
                     )
                     .overlay(RoundedRectangle(cornerRadius: 25.0)
                         .stroke(Color.black, lineWidth: 2)
@@ -26,11 +31,12 @@ struct IconGrid: View {
                     .shadow(color: .black, radius: 9)
                 } else {
                     CurrencyIcon(
-                        icon: CurrencyImage.allCases[i].rawValue,
-                        title: CurrencyText.allCases[i].rawValue
+                        icon: currencyImageTemp.rawValue,
+                        title: currencyTextTemp.rawValue
                     )
                     .onTapGesture {
-                        currency = Currency.allCases[i]
+                        currency = currencyTemp
+                        UserDefaults.standard.setValue(currencyTemp.rawValue, forKeyPath: keyPath)
                     }
                 }
             }
@@ -40,5 +46,5 @@ struct IconGrid: View {
 }
 
 #Preview(traits: .sizeThatFitsLayout) {
-    IconGrid(currency: .constant(.goldPiece))
+    IconGrid(currency: .constant(.goldPiece), keyPath: "leftCurrency")
 }

@@ -21,11 +21,11 @@ struct SelectCurrency: View {
                 Text("Select the currency you are starting with:")
                     .bold()
                     .multilineTextAlignment(.center)
-                IconGrid(currency: $leftCurrency)
+                IconGrid(currency: $leftCurrency, keyPath: "leftCurrency")
                 Text("Select the currency you would like to convert to:")
                     .bold()
                     .multilineTextAlignment(.center)
-                IconGrid(currency: $rightCurrency)
+                IconGrid(currency: $rightCurrency, keyPath: "rightCurrency")
                 CustomButton()
             }
         }

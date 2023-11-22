@@ -10,8 +10,8 @@ import SwiftUI
 struct ContentView: View {
     @State var leftAmount = ""
     @State var rightAmount = ""
-    @State var leftCurrency: Currency = .silverPiece
-    @State var rightCurrency: Currency = .goldPiece
+    @State var leftCurrency: Currency = Currency(rawValue: UserDefaults.standard.double(forKey: "leftCurrency")) ?? .silverPiece
+    @State var rightCurrency: Currency = Currency(rawValue: UserDefaults.standard.double(forKey: "rightCurrency")) ?? .goldPiece
     @State var showExchangeInfo = false
     
     var body: some View {
