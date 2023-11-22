@@ -8,14 +8,48 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var leftAmount = ""
+    @State var rightAmount = ""
+    @State var leftCurrency: Currency = .silverPiece
+    @State var rightCurrency: Currency = .goldPiece
+    @State var showExchangeInfo = false
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            Image("background")
+                .resizable()
+                .edgesIgnoringSafeArea(.all)
+            VStack {
+                Image("prancingpony")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 200)
+                Text("Currency Exchange")
+                    .font(.largeTitle)
+                    .foregroundStyle(.white)
+                FormContainer(
+                    leftAmount: $leftAmount,
+                    rightAmount: $rightAmount,
+                    leftCurrency: $leftCurrency,
+                    rightCurrency: $rightCurrency
+                )
+                Spacer()
+                HStack {
+                    Spacer()
+                    Button {
+                        showExchangeInfo.toggle()
+                    } label: {
+                        Image(systemName: "info.circle.fill")
+                    }
+                    .font(.largeTitle)
+                    .foregroundColor(.white)
+                    .padding()
+                    .sheet(isPresented: $showExchangeInfo, content: {
+                        ExchangeInfo()
+                    })
+                }
+            }
         }
-        .padding()
     }
 }
 
